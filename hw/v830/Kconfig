@@ -1,0 +1,6 @@
+config V832_MPU
+    bool
+
+config V832_BOARD
+    bool
+    select V832_MPU

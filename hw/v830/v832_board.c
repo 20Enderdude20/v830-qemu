@@ -37,7 +37,7 @@ static void v832_board_init(MachineState *machine)
 
     //Here we load the firmware file with a load function that we will implment in boot.c
     if (machine->firmware) {
-        if (!v832_load_firmware(&m_state->mpu.cpu, machine,
+        if (!v830_load_firmware(&m_state->mpu.cpu, machine,
                                  &m_state->mpu.flash, machine->firmware)) {
             exit(1);
         }
@@ -52,6 +52,7 @@ static void v832_board_class_init(ObjectClass *oc, void *data)
     MachineClass *mc = MACHINE_CLASS(oc);
     mc->desc = "NEC V832 Generic Board";
     mc->alias = "v832-board";
+    mc->default_cpu_type = "v832-v830-cpu";
     
     //Notice that we tell QEMU what function is used to initialize our board here.
     mc->init = v832_board_init;

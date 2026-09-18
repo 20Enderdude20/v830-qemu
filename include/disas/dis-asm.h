@@ -207,6 +207,8 @@ enum bfd_architecture
   bfd_arch_tic30,      /* Texas Instruments TMS320C30 */
   bfd_arch_v850,       /* NEC V850 */
 #define bfd_mach_v850          0
+  bfd_arch_v830, 
+#define bfd_mach_v830     0x70c4
   bfd_arch_arc,        /* Argonaut RISC Core */
 #define bfd_mach_arc_base 0
   bfd_arch_m32r,       /* Mitsubishi M32R/D */
